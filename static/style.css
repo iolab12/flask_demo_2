@@ -1,0 +1,272 @@
+html, body {
+    width:100%;
+    height:100%;
+    padding:0;
+    /*background:#f1f1f1;*/
+    background: #fff;
+    margin:0;
+    font:400 1em/1.5 "myriad-pro", "Helvetica Neue", Calibri, Arial, Helvetica, sans-serif;
+    color:#333;
+}
+
+a {
+    text-decoration: none;
+    color:#5898C7;
+    border:none;
+    opacity: 1;
+    text-decoration:none;
+/*  -webkit-transition: all 200ms ease-out;
+     -moz-transition: all 200ms ease-out;
+      -ms-transition: all 200ms ease-out;
+       -o-transition: all 200ms ease-out;
+          transition: all 200ms ease-out;*/
+}
+
+a:hover {
+    /*opacity: 0.6;*/
+}
+
+ul {
+    list-style-type: none;
+}
+
+#container {
+    width:100%;
+}
+
+#nav-container {
+    width:100%;
+    height:90px;
+    background: #161e27;
+}
+
+#footer {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    height:10px;
+    background: #161e27;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.nav_left
+{
+    float: left;
+}
+
+.nav_right
+{
+    float: right;
+}
+
+#content-container {
+    margin: 0px auto;
+    width: 1125px;
+    min-height: 500px;
+    padding-top: 10px;
+}
+
+
+#logo {
+    float: left;
+    position: relative;
+    /*top: -25px;*/
+    clear:both;
+    width:100%;
+    padding-top: 10px;
+}
+
+#logo a {
+    padding: 0;
+    margin: 0;
+}
+
+#logo a:hover {
+    opacity: 1;
+}
+
+#logoLink img{
+    width: 238px;
+    border: none;
+}
+
+section
+{
+    width: 100%;
+    margin: 10px auto 0px auto;
+    display: block;
+    /*padding: 10px 20px 10px 20px;*/
+}
+
+img {
+    border: 2px solid #e2e8ee;
+    width: 100%;
+}
+
+.padding {
+    padding: 2em;
+    margin: 0;
+}
+
+h1, h2 {
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-family: "futura-pt", "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 1em;
+    padding: 0;
+    margin: 0;
+    color: #555;
+}
+
+/*h3 and h4 used in programming*/
+
+ h3 {
+    font-family: "futura-pt", "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #414042;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-family: "futura-pt", "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #414042;
+
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul , .menu ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    color: #F5F5F5;
+    /*color:#445058;*/
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding:7px 15px;
+    font: 12px "futura-pt", Helvetica, Arial, sans-serif;
+    font-weight:bold;
+    /*text-shadow:1px 1px #777;*/
+}
+
+.menu ul li a:active, .menu ul li a:hover {
+    /*color: #F5F5F5;*/
+    color: #1799dd;
+    /*background: #DDEFF4;*/
+    border-bottom: 3px solid #f6473d;
+}
+
+*.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+#signup {
+    width: 90%;
+    border: 2px solid #333;
+    margin: 10px 0;
+    padding: 1em;
+    /*background: #e2e8ee;*/
+    color: #6c7a89;
+}
+
+#register {
+    background: ;
+}
+
+form.form1 ul {
+    padding: 0;
+    margin: 0;
+}
+form.form1 ul .field {
+    /*background: #e2e8ee;*/
+    /*border-color: #E5E5E5;*/
+    /*border-style: solid;
+    border-width: 2px;*/
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    /*margin: 5px;*/
+}
+form.form1 label {
+    float: left;
+    font-size: 13px;
+    width: 200px;
+}
+form.form1 input:not([type=radio]),
+form.form1 textarea {
+    /*background: #ffffff;*/
+    /*border: none;*/
+    /*-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;*/
+    /*font: italic 13px Georgia, "Times New Roman", Times, serif;*/
+    /*outline: none;*/
+    padding: 5px;
+    width: 300px;
+}
+form.form1 input:focus,
+form.form1 input[type=submit]:hover,
+form.form1 textarea:focus {
+    /*background: #eaeaea;*/
+}
+form.form1 input[type=radio] {
+    float: left;
+    margin-right: 5px;
+}
+
+form.form2 ul .field {
+    border-color: #E5E5E5;
+    border-style: solid;
+    border-width: 2px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+form.form2 label {
+    float: left;
+    font-size: 13px;
+    width: 200px;
+}
+form.form2 input {
+    background: #ffffff;
+    /*border: none;*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    font: 13px "Helvetica Neue", sans-serif;
+    /*outline: none;*/
+    padding: 5px;
+    width: 200px;
+}
