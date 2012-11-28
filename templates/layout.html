@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO</title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  
+  <div id="container">
+    <div id="nav-container">
+      
+      <a href="{{ url_for('home') }}"><h1>Polls</h1></a>
+      {% if not session.logged_in %}
+        <a href="{{ url_for('login') }}">log in</a>
+        <a href="{{ url_for('register') }}">register</a>
+      {% else %}
+        <a href="{{ url_for('logout') }}">log out</a>
+      {% endif %}
+        
+    </div>
+
+    <div id="content-container" class="grids">
+      {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+      {% endfor %}
+      {% block content %}{% endblock %}
+    </div>
+
+  </div>
+</body>
+</html>
