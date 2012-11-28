@@ -50,7 +50,7 @@ def register():
         # TODO
         # Check if a username already exists in the database and return an error
 
-        
+
         g.db.execute('insert into users (username, password, firstname, lastname) values (?, ?, ?, ?)',
                             [request.form['username'], request.form['password'], request.form['firstname'], request.form['lastname']])
         g.db.commit()
@@ -63,7 +63,6 @@ def register():
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
-    print "hmm"
     error = None
     if request.method == 'POST':
         cur = g.db.execute('select username, password from users where username = ? and password = ?', [request.form['username'], request.form['password']])
@@ -74,7 +73,7 @@ def login():
             session['username'] = request.form['username']
             flash('You were logged in')
             return redirect(url_for('show_polls'))
-        return render_template('polls.html', error=error)
+        return render_template('login.html', error=error)
 
     return render_template('login.html', error=error)
 
@@ -89,10 +88,22 @@ def logout():
 def about():
     return "This is an about page"
 
-@app.route("/show_polls/")
+@app.route("/show_polls/", methods=['GET', 'POST'])
 def show_polls():
+    error = None
+    if session['logged_in'] == False:
+        redirect(url_for('home'))
+
     username = session.get('username')
-    return render_template('polls.html',username=username)
+    # POST REQUESTS ARE FOR ADDING
+    if request.method == 'POST':
+        # if the user is logged in, add the new poll
+        # dont forget to check for an empty string
+        # TODO
+        
+        return render_template('polls.html',username=username, error=error)
+        
+    return render_template('polls.html',username=username, error=error)
 
 if __name__ == "__main__":
     app.run();
